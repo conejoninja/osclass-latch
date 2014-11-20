@@ -16,9 +16,10 @@ Short Name: latch
 
     function latch_install() {
         ModelLatch::newInstance()->createTable();
-        osc_set_preference('version', '100', 'latch');
+        osc_set_preference('version', '100', 'latch', 'INTEGER');
         osc_set_preference('appId', '', 'latch');
         osc_set_preference('appSecret', '', 'latch');
+        osc_set_preference('usersEnabled', 1, 'latch', 'BOOLEAN');
     }
 
     function latch_uninstall() {
@@ -26,6 +27,7 @@ Short Name: latch
         osc_delete_preference('version', 'latch');
         osc_delete_preference('appId', 'latch');
         osc_delete_preference('appSecret', 'latch');
+        osc_delete_preference('usersEnabled', 'latch');
     }
 
     function latch_admin_menu() {
@@ -37,8 +39,6 @@ Short Name: latch
     function latch_form() {
         include_once dirname(__FILE__) . '/views/form.php';
     }
-    osc_add_hook('user_register_form', 'latch_form');
-    osc_add_hook('user_profile_form', 'latch_form');
 
     function latch_admin_form() {
         include_once dirname(__FILE__) . '/views/admin/form.php';
@@ -59,8 +59,6 @@ Short Name: latch
             }
         }
     }
-    osc_add_hook('user_register_completed', 'latch_pair');
-    osc_add_hook('user_edit_completed', 'latch_pair');
 
     function latch_admin_pair($adminId) {
         if (Params::getParam('latch_code') != '') {
@@ -118,7 +116,6 @@ Short Name: latch
             }
         }
     }
-    osc_add_hook('before_login', 'latch_login');
 
     function latch_login_admin($admin) {
         $account = ModelLatch::newInstance()->findByUser($admin['pk_i_id'], 1);
@@ -158,10 +155,21 @@ Short Name: latch
         Cookie::newInstance()->set();
     }
 
+    function latch_users_enabled() {
+        return (osc_get_preference('usersEnabled', 'latch')=='1');
+    }
 
-    osc_add_route('latch-unpair', 'latch/unpair', 'latch/unpair', osc_plugin_folder(__FILE__).'views/unpair.php');
     osc_add_route('latch-admin-unpair', 'latch/admin/unpair', 'latch/admin/unpair', osc_plugin_folder(__FILE__).'views/admin/unpair.php');
     osc_add_route('latch-admin-conf', 'latch/admin/conf', 'latch/admin/conf', osc_plugin_folder(__FILE__).'views/admin/conf.php');
+
+    if(latch_users_enabled()) {
+        osc_add_route('latch-unpair', 'latch/unpair', 'latch/unpair', osc_plugin_folder(__FILE__).'views/unpair.php');
+        osc_add_hook('user_register_form', 'latch_form');
+        osc_add_hook('user_profile_form', 'latch_form');
+        osc_add_hook('user_register_completed', 'latch_pair');
+        osc_add_hook('user_edit_completed', 'latch_pair');
+        osc_add_hook('before_login', 'latch_login');
+    }
 
     osc_register_plugin(osc_plugin_path(__FILE__), 'latch_install');
     osc_add_hook(osc_plugin_path(__FILE__)."_uninstall", 'latch_uninstall');

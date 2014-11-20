@@ -3,6 +3,7 @@
     if(Params::getParam('plugin_action')=='done') {
         osc_set_preference('appId', Params::getParam("appId"), 'latch', 'STRING');
         osc_set_preference('appSecret', Params::getParam("appSecret"), 'latch', 'STRING');
+        osc_set_preference('usersEnabled', Params::getParam("usersEnabled") ? Params::getParam("usersEnabled") : '0', 'latch', 'BOOLEAN');
 
         // HACK : This will make possible use of the flash messages ;)
         ob_get_clean();
@@ -33,6 +34,17 @@
                     <div class="form-row">
                         <div class="form-label"><?php _e('AppSecret', 'latch'); ?></div>
                         <div class="form-controls"><input type="text" class="xlarge" name="appSecret" value="<?php echo osc_get_preference('appSecret', 'latch'); ?>" /></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-label"><?php _e('Enable Latch for users', 'latch'); ?></div>
+                        <div class="form-controls">
+                            <div class="form-label-checkbox">
+                                <label>
+                                    <input type="checkbox" <?php echo (latch_users_enabled() ? 'checked="true"' : ''); ?> name="usersEnabled" value="1" />
+                                    <?php _e('Allow users to use Latch (Admins could use Latch always, even if you uncheck this box)', 'latch'); ?>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="clear"></div>
                     <div class="form-actions">
