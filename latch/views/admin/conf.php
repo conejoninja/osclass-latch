@@ -23,6 +23,10 @@
             <fieldset>
                 <div class="form-horizontal">
                     <div class="form-row">
+                        <div class="form-label"><?php _e('Latch', 'latch'); ?></div>
+                        <div class="form-controls"><a href="https://latch.elevenpaths.com/www/"><?php _e('Access your developer area at latch.elevenpaths.com to get your appId and appSecret', 'latch'); ?></a></div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-label"><?php _e('AppID', 'latch'); ?></div>
                         <div class="form-controls"><input type="text" class="xlarge" name="appId" value="<?php echo osc_get_preference('appId', 'latch'); ?>" /></div>
                     </div>
