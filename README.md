@@ -1,7 +1,14 @@
 Osclass Latch plugin
 ====================
 
-Enable Latch ( https://latch.elevenpaths.com/ ) security to your website
+Enable Latch ( https://latch.elevenpaths.com/ ) security to your website, for users and admins.
+
+
+
+How to configure
+================
+Create a developer account at https://latch.elevenpaths.com/www/ , create a new application and configure your appId and appSecret on the admin panel.
+
 
 License
 ===

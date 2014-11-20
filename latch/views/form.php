@@ -6,7 +6,7 @@
             <a href="<?php echo osc_route_url('latch-unpair'); ?>"><?php _e('Already paired. UNPAIR Latch?'); ?></a>
         <?php } else { ?>
             <input type="text" id="latch_code" name="latch_code" />
-            <a href="https://latch.elevenpaths.com/www/faq.html" >What is Latch?</a>
+            <a href="https://latch.elevenpaths.com/www/register" >What is Latch?</a>
         <?php }; ?>
     </div>
 </div>

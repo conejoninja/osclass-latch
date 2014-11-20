@@ -7,7 +7,7 @@
         <?php } else { ?>
             <div class="form-controls">
                 <input type="text" id="latch_code" name="latch_code" />
-                <a href="https://latch.elevenpaths.com/www/faq.html"><?php _e('What is Latch?', 'latch'); ?></a>
+                <a href="https://latch.elevenpaths.com/www/register"><?php _e('What is Latch?', 'latch'); ?></a>
             </div>
         <?php }; ?>
     </div>
