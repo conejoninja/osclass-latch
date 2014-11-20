@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Latch Authentication
-Plugin URI:
+Plugin URI: latch
 Description: Use latch to secure your users
 Version: 1.0.0
 Author: _CONEJO
