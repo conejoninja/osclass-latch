@@ -3,7 +3,7 @@
 Plugin Name: Latch Authentication
 Plugin URI: latch
 Description: Use latch to secure your users
-Version: 1.0.0
+Version: 1.0.1
 Author: _CONEJO
 Author URI:
 Short Name: latch
@@ -16,7 +16,7 @@ Short Name: latch
 
     function latch_install() {
         ModelLatch::newInstance()->createTable();
-        osc_set_preference('version', '100', 'latch', 'INTEGER');
+        osc_set_preference('version', '101', 'latch', 'INTEGER');
         osc_set_preference('appId', '', 'latch');
         osc_set_preference('appSecret', '', 'latch');
         osc_set_preference('usersEnabled', 1, 'latch', 'BOOLEAN');
