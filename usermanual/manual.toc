@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}About this plugin}{2}{section.1}
+\contentsline {section}{\numberline {2}Pre-requisites}{2}{section.2}
+\contentsline {section}{\numberline {3}What is Latch?}{2}{section.3}
+\contentsline {section}{\numberline {4}Installation}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}Osclass' market}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Zip file}{3}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Manual upload}{3}{subsection.4.3}
+\contentsline {section}{\numberline {5}Configuration}{3}{section.5}
+\contentsline {section}{\numberline {6}Usage}{4}{section.6}
+\contentsline {subsection}{\numberline {6.1}Users}{4}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Administrators}{4}{subsection.6.2}
+\contentsline {section}{\numberline {7}Uninstallation}{5}{section.7}
