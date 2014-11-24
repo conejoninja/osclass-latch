@@ -45,7 +45,7 @@
   (generated)
   "manual.log"
   "manual.dvi"
-["pdflatex"] 1416674824 "manual.tex" "manual.pdf" "manual" 1416674825
+["pdflatex"] 1416844466 "manual.tex" "manual.pdf" "manual" 1416844468
   "/etc/texmf/web2c/texmf.cnf" 1415104417 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc" 1276043435 2452 388b1f44dfda03ab19527677af70e7fb ""
@@ -182,16 +182,16 @@
   "Figures/3.png" 1416670467 52772 bf142c2f2c07c72f3228ab102bb306cc ""
   "Figures/4.png" 1416670757 50720 90169bac3b615fad2d192798124f37ce ""
   "Figures/5.png" 1416670809 52395 95e4635479072726af13055c3c7e87d9 ""
-  "manual.aux" 1416674824 2973 1fbe68ac81f2258c7b34568be579a6e3 ""
-  "manual.lof" 1416674824 584 25831a77aabe4a5129ed4e3169ed701b ""
-  "manual.out" 1416674824 671 e434ab5e4d5ca115eac6b69d874ac756 ""
-  "manual.tex" 1416674822 7494 a2549ee445cb963c81a4a509d18bad77 ""
-  "manual.toc" 1416674824 854 2b806c5c818783971384205f249fc56f ""
+  "manual.aux" 1416844468 2973 1fbe68ac81f2258c7b34568be579a6e3 ""
+  "manual.lof" 1416844468 584 25831a77aabe4a5129ed4e3169ed701b ""
+  "manual.out" 1416844468 671 e434ab5e4d5ca115eac6b69d874ac756 ""
+  "manual.tex" 1416844465 7533 f673e5cafe7e9de36ee1235f540ffb43 ""
+  "manual.toc" 1416844468 854 2b806c5c818783971384205f249fc56f ""
   "structure.tex" 1398085742 3061 95a594650420119c9f58fd1c52a8f116 ""
   (generated)
+  "manual.lof"
+  "manual.aux"
+  "manual.log"
   "manual.toc"
   "manual.out"
-  "manual.log"
-  "manual.lof"
   "manual.pdf"
-  "manual.aux"
